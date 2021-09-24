@@ -1,0 +1,2 @@
+model_checkpoint_path: "~/ray_results/LOLA_Exact/2021_05_07/08_54_58/LOLAExactTrainer_e8235_00000_0_seed=1620377698_2021-05-07_08-55-01/checkpoint_000051/checkpoint.ckpt"
+all_model_checkpoint_paths: "~/ray_results/LOLA_Exact/2021_05_07/08_54_58/LOLAExactTrainer_e8235_00000_0_seed=1620377698_2021-05-07_08-55-01/checkpoint_000051/checkpoint.ckpt"

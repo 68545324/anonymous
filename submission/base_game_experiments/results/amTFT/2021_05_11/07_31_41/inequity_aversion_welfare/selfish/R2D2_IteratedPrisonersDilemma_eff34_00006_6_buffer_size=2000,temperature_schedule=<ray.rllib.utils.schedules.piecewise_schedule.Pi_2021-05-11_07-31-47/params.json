@@ -1,0 +1,211 @@
+{
+  "buffer_size": 2000,
+  "burn_in": 0,
+  "callbacks": "<class 'submission.utils.callbacks.merge_callbacks.<locals>.MergedCallBacks'>",
+  "double_q": true,
+  "dueling": true,
+  "env": "<class 'submission.envs.matrix_sequential_social_dilemma.IteratedPrisonersDilemma'>",
+  "env_config": {
+    "beta_steps_config": [
+      [
+        0,
+        0.125
+      ],
+      [
+        1.0,
+        0.25
+      ]
+    ],
+    "bs_epi_mul": 4,
+    "buf_frac": 0.125,
+    "lr_steps_config": [
+      [
+        0,
+        0.0
+      ],
+      [
+        0.05,
+        1.0
+      ],
+      [
+        1.0,
+        1e-09
+      ]
+    ],
+    "max_steps": 20,
+    "players_ids": [
+      "player_row",
+      "player_col"
+    ],
+    "temperature_steps_config": [
+      [
+        0,
+        2.0
+      ],
+      [
+        0.33,
+        0.5
+      ],
+      [
+        0.66,
+        0.1
+      ]
+    ]
+  },
+  "exploration_config": {
+    "temperature_schedule": "<ray.rllib.utils.schedules.piecewise_schedule.PiecewiseSchedule object at 0x7f2aac775860>",
+    "type": "<class 'submission.utils.exploration.SoftQSchedule'>"
+  },
+  "explore": true,
+  "framework": "torch",
+  "gamma": 0.96,
+  "grad_clip": 1,
+  "hiddens": [
+    64
+  ],
+  "learning_starts": 80,
+  "logger_config": {
+    "wandb": {
+      "api_key_file": "./../../../api_key_wandb",
+      "group": "amTFT/2021_05_11/07_31_41",
+      "log_config": true,
+      "project": "amTFT"
+    }
+  },
+  "lr": 0.03,
+  "lr_schedule": "<ray.rllib.utils.schedules.piecewise_schedule.PiecewiseSchedule object at 0x7f2aac7757f0>",
+  "min_iter_time_s": 0.0,
+  "model": {
+    "fcnet_activation": "relu",
+    "fcnet_hiddens": [
+      64
+    ],
+    "lstm_cell_size": 16,
+    "max_seq_len": 20,
+    "use_lstm": true
+  },
+  "multiagent": {
+    "observation_fn": "<function observation_fn at 0x7f2abfc02510>",
+    "policies": {
+      "player_col": [
+        "<class 'submission.algos.amTFT.policy_using_rollouts.AmTFTRolloutsTorchPolicy'>",
+        "Discrete(5)",
+        "Discrete(2)",
+        {
+          "auto_load_checkpoint": true,
+          "batch_mode": "complete_episodes",
+          "callbacks": null,
+          "debit_threshold": 10.0,
+          "last_k": 1,
+          "n_rollout_replicas": 10,
+          "nested_policies": [
+            {
+              "Policy_class": "<class 'ray.rllib.policy.policy_template.R2D2TorchPolicy'>",
+              "config_update": {
+                "add_inequity_aversion_welfare": [
+                  true,
+                  0.0,
+                  1.0,
+                  0.96,
+                  0.96
+                ],
+                "add_utilitarian_welfare": false
+              }
+            },
+            {
+              "Policy_class": "<class 'ray.rllib.policy.policy_template.R2D2TorchPolicy'>",
+              "config_update": {}
+            },
+            {
+              "Policy_class": "<class 'ray.rllib.policy.policy_template.R2D2TorchPolicy'>",
+              "config_update": {}
+            },
+            {
+              "Policy_class": "<class 'ray.rllib.policy.policy_template.R2D2TorchPolicy'>",
+              "config_update": {}
+            }
+          ],
+          "opp_policy_id": "player_row",
+          "optimizer": {
+            "sgd_momentum": 0.0
+          },
+          "own_policy_id": "player_col",
+          "punish_instead_of_selfish": true,
+          "punishment_multiplier": 3.0,
+          "rollout_length": 20,
+          "use_short_debit_rollout": true,
+          "verbose": 0,
+          "welfare_key": "inequity_aversion_welfare",
+          "working_state": "train_selfish"
+        }
+      ],
+      "player_row": [
+        "<class 'submission.algos.amTFT.policy_using_rollouts.AmTFTRolloutsTorchPolicy'>",
+        "Discrete(5)",
+        "Discrete(2)",
+        {
+          "auto_load_checkpoint": true,
+          "batch_mode": "complete_episodes",
+          "callbacks": null,
+          "debit_threshold": 10.0,
+          "last_k": 1,
+          "n_rollout_replicas": 10,
+          "nested_policies": [
+            {
+              "Policy_class": "<class 'ray.rllib.policy.policy_template.R2D2TorchPolicy'>",
+              "config_update": {
+                "add_inequity_aversion_welfare": [
+                  true,
+                  0.0,
+                  1.0,
+                  0.96,
+                  0.96
+                ],
+                "add_utilitarian_welfare": false
+              }
+            },
+            {
+              "Policy_class": "<class 'ray.rllib.policy.policy_template.R2D2TorchPolicy'>",
+              "config_update": {}
+            },
+            {
+              "Policy_class": "<class 'ray.rllib.policy.policy_template.R2D2TorchPolicy'>",
+              "config_update": {}
+            },
+            {
+              "Policy_class": "<class 'ray.rllib.policy.policy_template.R2D2TorchPolicy'>",
+              "config_update": {}
+            }
+          ],
+          "opp_policy_id": "player_col",
+          "optimizer": {
+            "sgd_momentum": 0.0
+          },
+          "own_policy_id": "player_row",
+          "punish_instead_of_selfish": true,
+          "punishment_multiplier": 3.0,
+          "rollout_length": 20,
+          "use_short_debit_rollout": true,
+          "verbose": 0,
+          "welfare_key": "inequity_aversion_welfare",
+          "working_state": "train_selfish"
+        }
+      ]
+    },
+    "policy_mapping_fn": "<function get_rllib_config.<locals>.<lambda> at 0x7f2abe07b0d0>"
+  },
+  "num_envs_per_worker": 16,
+  "num_workers": 0,
+  "optimizer": {
+    "sgd_momentum": 0.0
+  },
+  "prioritized_replay": false,
+  "rollout_fragment_length": 20,
+  "seed": 1620718307,
+  "target_network_update_freq": 600,
+  "timesteps_per_iteration": 64,
+  "train_batch_size": 80,
+  "training_intensity": 640,
+  "use_h_function": false,
+  "zero_init_states": false
+}

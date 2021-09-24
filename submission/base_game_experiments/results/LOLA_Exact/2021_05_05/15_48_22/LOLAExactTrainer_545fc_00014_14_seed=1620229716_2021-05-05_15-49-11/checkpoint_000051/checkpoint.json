@@ -1,0 +1,5 @@
+{
+    "tf_checkpoint_dir": "~/ray_results/LOLA_Exact/2021_05_05/15_48_22/LOLAExactTrainer_545fc_00014_14_seed=1620229716_2021-05-05_15-49-11/checkpoint_000051",
+    "tf_checkpoint_filename": "checkpoint",
+    "timestep": 51
+}

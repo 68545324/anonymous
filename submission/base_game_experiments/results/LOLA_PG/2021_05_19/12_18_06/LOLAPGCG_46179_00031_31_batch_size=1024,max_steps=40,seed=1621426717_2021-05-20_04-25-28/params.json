@@ -1,0 +1,318 @@
+{
+  "ac_lr": 1.0,
+  "batch_size": 1024,
+  "center_and_normalize_with_rolling_avg": false,
+  "changed_config": false,
+  "classify_into_welfare_fn": true,
+  "clip_lola_actor_norm": 10.0,
+  "clip_lola_correction_norm": 3.0,
+  "clip_lola_update_norm": false,
+  "clip_loss_norm": false,
+  "correction_reward_baseline_per_step": false,
+  "debug": false,
+  "entropy_coeff": 0.02,
+  "env_class": "<class 'submission.envs.vectorized_coin_game.VectorizedCoinGame'>",
+  "env_config": {
+    "batch_size": 1024,
+    "both_players_can_pick_the_same_coin": true,
+    "force_vectorize": false,
+    "get_additional_info": true,
+    "grid_size": 3,
+    "max_steps": 40,
+    "players_ids": [
+      "player_red",
+      "player_blue"
+    ],
+    "punishment_helped": true,
+    "same_obs_for_each_player": true
+  },
+  "env_name": "VectorizedCoinGame",
+  "exact": false,
+  "exp_name": "LOLA_PG/2021_05_19/12_18_06",
+  "gamma": 0.9,
+  "global_lr_divider": 0.1,
+  "grid_size": 3,
+  "hidden": 32,
+  "load_plot_data": null,
+  "lola_correction_multiplier": 8,
+  "lola_update": true,
+  "lr": 0.005,
+  "lr_correction": 1,
+  "lr_decay": true,
+  "mem_efficient": true,
+  "metric": "player_blue_pick_speed",
+  "num_episodes": 2000,
+  "only_process_reward": false,
+  "opp_model": false,
+  "plot_assemblage_tags": [
+    [
+      "total_reward"
+    ],
+    [
+      "entrop"
+    ],
+    [
+      "player_1_loss",
+      "player_2_loss"
+    ],
+    [
+      "v_0_log",
+      "v_1_log"
+    ],
+    [
+      "entropy_p_0",
+      "entropy_p_1"
+    ],
+    [
+      "actor_loss_0",
+      "actor_loss_1"
+    ],
+    [
+      "parameters_norm_0",
+      "parameters_norm_1"
+    ],
+    [
+      "second_order0_sum",
+      "second_order1_sum"
+    ],
+    [
+      "player_1_update_sum",
+      "player_2_update_sum"
+    ],
+    [
+      "actor_grad_sum_0",
+      "actor_grad_sum_1"
+    ],
+    [
+      "lr_decay_ratio"
+    ],
+    [
+      "pg_expl_player_loss"
+    ],
+    [
+      "player_1_loss",
+      "player_2_loss",
+      "pg_expl_player_loss"
+    ],
+    [
+      "v_0_log",
+      "v_1_log",
+      "pg_expl_v_log"
+    ],
+    [
+      "entropy_p_0",
+      "entropy_p_1"
+    ],
+    [
+      "player_1_update_sum",
+      "player_2_update_sum",
+      "pg_expl_entropy"
+    ],
+    [
+      "actor_loss_0",
+      "actor_loss_1",
+      "pg_expl_actor_loss"
+    ],
+    [
+      "parameters_norm_0",
+      "parameters_norm_1",
+      "pg_expl_parameters_norm"
+    ],
+    [
+      "player_1_update_sum",
+      "player_2_update_sum",
+      "pg_expl_update_sum"
+    ],
+    [
+      "actor_grad_sum_0",
+      "actor_grad_sum_1",
+      "pg_expl_actor_grad_sum"
+    ],
+    [
+      "pick_own_color_player_red_mean",
+      "pick_own_color_player_blue_mean"
+    ],
+    [
+      "pick_speed_player_red_mean",
+      "pick_speed_player_blue_mean"
+    ],
+    [
+      "pick_own_color"
+    ],
+    [
+      "pick_speed",
+      "pick_own_color"
+    ],
+    [
+      "pick_own_color_player_red_mean",
+      "pick_own_color_player_blue_mean",
+      "pick_speed_player_red_mean",
+      "pick_speed_player_blue_mean"
+    ],
+    [
+      "policy_reward_mean"
+    ],
+    [
+      "grad_gnorm"
+    ],
+    [
+      "entropy_buffer_samples_avg"
+    ],
+    [
+      "entropy_avg"
+    ],
+    [
+      "loss",
+      "td_error"
+    ],
+    [
+      "learn_on_batch"
+    ],
+    [
+      "last_training_max_q_values"
+    ],
+    [
+      "last_training_min_q_values"
+    ],
+    [
+      "act_dist_inputs_avg_act0"
+    ],
+    [
+      "act_dist_inputs_avg_act1"
+    ],
+    [
+      "act_dist_inputs_avg_act2"
+    ],
+    [
+      "act_dist_inputs_avg_act3"
+    ],
+    [
+      "q_values_avg_act0"
+    ],
+    [
+      "q_values_avg_act1"
+    ],
+    [
+      "q_values_avg_act2"
+    ],
+    [
+      "q_values_avg_act3"
+    ],
+    [
+      "q_values_single_max"
+    ],
+    [
+      "act_dist_inputs_single_max"
+    ],
+    [
+      "action_prob_single"
+    ],
+    [
+      "action_prob_avg"
+    ],
+    [
+      "reward"
+    ],
+    [
+      "last_training_max_q_values",
+      "last_training_target_max_q_values"
+    ],
+    [
+      "last_training_min_q_values",
+      "last_training_target_min_q_values"
+    ],
+    [
+      "timers"
+    ],
+    [
+      "ms"
+    ],
+    [
+      "throughput"
+    ],
+    [
+      "_lr"
+    ],
+    [
+      "temperature"
+    ]
+  ],
+  "plot_keys": [
+    "reward",
+    "total_reward",
+    "entrop",
+    "player_1_loss",
+    "player_2_loss",
+    "v_0_log",
+    "v_1_log",
+    "entropy_p_0",
+    "entropy_p_1",
+    "actor_loss_0",
+    "actor_loss_1",
+    "parameters_norm_0",
+    "parameters_norm_1",
+    "second_order0_sum",
+    "second_order1_sum",
+    "player_1_update_sum",
+    "player_2_update_sum",
+    "actor_grad_sum_0",
+    "actor_grad_sum_1",
+    "lr_decay_ratio",
+    "pg_expl_player_loss",
+    "pg_expl_v_log",
+    "pg_expl_entropy",
+    "pg_expl_actor_loss",
+    "pg_expl_parameters_norm",
+    "pg_expl_update_sum",
+    "pg_expl_actor_grad_sum",
+    "pick_speed",
+    "pick_own_color",
+    "grad_gnorm",
+    "reward",
+    "loss",
+    "entropy",
+    "entropy_avg",
+    "td_error",
+    "error",
+    "act_dist_inputs_avg",
+    "act_dist_inputs_single",
+    "q_values_avg",
+    "action_prob",
+    "q_values_single",
+    "_lr",
+    "max_q_values",
+    "min_q_values",
+    "learn_on_batch",
+    "timers",
+    "ms",
+    "throughput",
+    "temperature"
+  ],
+  "process_reward_after_rolling": false,
+  "pseudo": false,
+  "punishment_helped": true,
+  "reg": 0,
+  "remove_trials_below_speed": 0.2,
+  "remove_trials_below_speed_for_both": false,
+  "reward_processing_bais": 0.1,
+  "seed": 1621426717,
+  "set_zero": 0,
+  "simple_net": true,
+  "summary_len": 1,
+  "trace_length": 40,
+  "train_n_replicates": 40,
+  "use_MAE": false,
+  "use_centered_reward": false,
+  "use_critic": false,
+  "use_normalized_rewards": false,
+  "use_rolling_avg_actor_grad": false,
+  "use_rolling_avg_reward": false,
+  "use_toolbox_env": true,
+  "wandb": {
+    "api_key_file": "./../../../api_key_wandb",
+    "group": "LOLA_PG/2021_05_19/12_18_06",
+    "project": "LOLA_PG"
+  },
+  "warmup": 1,
+  "weigth_decay": 0.001875
+}

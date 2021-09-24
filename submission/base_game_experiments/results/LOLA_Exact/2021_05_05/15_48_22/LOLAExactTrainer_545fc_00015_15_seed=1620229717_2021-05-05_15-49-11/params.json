@@ -1,0 +1,157 @@
+{
+  "Q_net_std": 3.0,
+  "classify_into_welfare_fn": true,
+  "clip_update": null,
+  "corrections": true,
+  "debug": false,
+  "env_name": "IteratedAsymBoS",
+  "exp_name": "LOLA_Exact/2021_05_05/15_48_22",
+  "gamma": 0.96,
+  "load_plot_data": null,
+  "lr": 1.0,
+  "lr_correction": 1.0,
+  "metric": "ret1",
+  "num_episodes": 50,
+  "num_hidden": 32,
+  "plot_assemblage_tags": [
+    [
+      "policy_reward_mean"
+    ],
+    [
+      "grad_gnorm"
+    ],
+    [
+      "entropy_buffer_samples_avg"
+    ],
+    [
+      "entropy_avg"
+    ],
+    [
+      "loss",
+      "td_error"
+    ],
+    [
+      "learn_on_batch"
+    ],
+    [
+      "last_training_max_q_values"
+    ],
+    [
+      "last_training_min_q_values"
+    ],
+    [
+      "act_dist_inputs_avg_act0"
+    ],
+    [
+      "act_dist_inputs_avg_act1"
+    ],
+    [
+      "act_dist_inputs_avg_act2"
+    ],
+    [
+      "act_dist_inputs_avg_act3"
+    ],
+    [
+      "q_values_avg_act0"
+    ],
+    [
+      "q_values_avg_act1"
+    ],
+    [
+      "q_values_avg_act2"
+    ],
+    [
+      "q_values_avg_act3"
+    ],
+    [
+      "q_values_single_max"
+    ],
+    [
+      "act_dist_inputs_single_max"
+    ],
+    [
+      "action_prob_single"
+    ],
+    [
+      "action_prob_avg"
+    ],
+    [
+      "reward"
+    ],
+    [
+      "last_training_max_q_values",
+      "last_training_target_max_q_values"
+    ],
+    [
+      "last_training_min_q_values",
+      "last_training_target_min_q_values"
+    ],
+    [
+      "timers"
+    ],
+    [
+      "ms"
+    ],
+    [
+      "throughput"
+    ],
+    [
+      "_lr"
+    ],
+    [
+      "temperature"
+    ],
+    [
+      "ret"
+    ]
+  ],
+  "plot_axis_scale_multipliers": [
+    0.005,
+    0.005
+  ],
+  "plot_keys": [
+    "grad_gnorm",
+    "reward",
+    "loss",
+    "entropy",
+    "entropy_avg",
+    "td_error",
+    "error",
+    "act_dist_inputs_avg",
+    "act_dist_inputs_single",
+    "q_values_avg",
+    "action_prob",
+    "q_values_single",
+    "_lr",
+    "max_q_values",
+    "min_q_values",
+    "learn_on_batch",
+    "timers",
+    "ms",
+    "throughput",
+    "temperature",
+    "ret"
+  ],
+  "pseudo": false,
+  "re_init_every_n_epi": 1,
+  "reg": 0.0,
+  "save_dir": "dice_results_ipd",
+  "seed": 1620229717,
+  "simple_net": true,
+  "trace_length": 200,
+  "train_n_replicates": 30,
+  "wandb": {
+    "api_key_file": "./../../../api_key_wandb",
+    "group": "LOLA_Exact/2021_05_05/15_48_22",
+    "project": "LOLA_Exact"
+  },
+  "with_linear_LR_decay_to_zero": false,
+  "x_limits": [
+    -0.1,
+    4.1
+  ],
+  "y_limits": [
+    -0.1,
+    4.1
+  ]
+}

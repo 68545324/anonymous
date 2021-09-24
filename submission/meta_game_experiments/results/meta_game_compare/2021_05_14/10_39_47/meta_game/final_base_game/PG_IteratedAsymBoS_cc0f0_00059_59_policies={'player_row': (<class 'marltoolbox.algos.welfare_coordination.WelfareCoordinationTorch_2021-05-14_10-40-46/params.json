@@ -1,0 +1,548 @@
+{
+  "callbacks": "<class 'submission.utils.callbacks.merge_callbacks.<locals>.MergedCallBacks'>",
+  "env": "<class 'submission.envs.matrix_sequential_social_dilemma.IteratedAsymBoS'>",
+  "env_config": {
+    "get_additional_info": true,
+    "max_steps": 200,
+    "players_ids": [
+      "player_row",
+      "player_col"
+    ]
+  },
+  "min_iter_time_s": 3.0,
+  "multiagent": {
+    "policies": {
+      "player_col": [
+        "<class 'submission.algos.welfare_coordination.WelfareCoordinationTorchPolicy'>",
+        "Discrete(5)",
+        "Discrete(2)",
+        {
+          "all_welfare_pairs_wt_payoffs": {
+            "egalitarian-egalitarian": [
+              1.7735397402512365,
+              1.7693390698591538
+            ],
+            "egalitarian-mixed": [
+              0.7521832708749707,
+              0.4832599486905972
+            ],
+            "egalitarian-utilitarian": [
+              1.9237993475446709,
+              0.6592919714478359
+            ],
+            "mixed-egalitarian": [
+              0.6557499715890194,
+              0.4916273328180032
+            ],
+            "mixed-mixed": [
+              2.838733585576099,
+              1.4203743177669543
+            ],
+            "mixed-utilitarian": [
+              1.24700860476216,
+              0.434701121040218
+            ],
+            "utilitarian-egalitarian": [
+              0.7664317724089629,
+              0.5282557952158544
+            ],
+            "utilitarian-mixed": [
+              1.2984322258198475,
+              0.4609742272456955
+            ],
+            "utilitarian-utilitarian": [
+              3.582438527056794,
+              0.9314796525219736
+            ]
+          },
+          "distrib_over_welfare_sets_to_annonce": "tensor([0., 0., 0., 1., 0., 0., 0.])",
+          "freeze_algo": true,
+          "nested_policies": [
+            {
+              "Policy_class": "<class 'submission.utils.policy.get_tune_policy_class.<locals>.FrozenPolicyFromTuneTrainer'>",
+              "config_update": {
+                "tune_config": {
+                  "Q_net_std": 3.0,
+                  "TuneTrainerClass": "<class 'submission.algos.lola.train_exact_tune_class_API.LOLAExactTrainer'>",
+                  "batch_size": 1,
+                  "classify_into_welfare_fn": true,
+                  "clip_update": null,
+                  "corrections": true,
+                  "debug": false,
+                  "env_name": "IteratedAsymBoS",
+                  "exp_name": "LOLA_Exact/2021_05_14/10_40_27",
+                  "gamma": 0.96,
+                  "load_plot_data": null,
+                  "lr": 1.0,
+                  "lr_correction": 1.0,
+                  "metric": "ret1",
+                  "min_iter_time_s": 3.0,
+                  "num_episodes": 100,
+                  "num_hidden": 32,
+                  "plot_assemblage_tags": [
+                    [
+                      "policy_reward_mean"
+                    ],
+                    [
+                      "grad_gnorm"
+                    ],
+                    [
+                      "entropy_buffer_samples_avg"
+                    ],
+                    [
+                      "entropy_avg"
+                    ],
+                    [
+                      "loss",
+                      "td_error"
+                    ],
+                    [
+                      "learn_on_batch"
+                    ],
+                    [
+                      "last_training_max_q_values"
+                    ],
+                    [
+                      "last_training_min_q_values"
+                    ],
+                    [
+                      "act_dist_inputs_avg_act0"
+                    ],
+                    [
+                      "act_dist_inputs_avg_act1"
+                    ],
+                    [
+                      "act_dist_inputs_avg_act2"
+                    ],
+                    [
+                      "act_dist_inputs_avg_act3"
+                    ],
+                    [
+                      "q_values_avg_act0"
+                    ],
+                    [
+                      "q_values_avg_act1"
+                    ],
+                    [
+                      "q_values_avg_act2"
+                    ],
+                    [
+                      "q_values_avg_act3"
+                    ],
+                    [
+                      "q_values_single_max"
+                    ],
+                    [
+                      "act_dist_inputs_single_max"
+                    ],
+                    [
+                      "action_prob_single"
+                    ],
+                    [
+                      "action_prob_avg"
+                    ],
+                    [
+                      "reward"
+                    ],
+                    [
+                      "last_training_max_q_values",
+                      "last_training_target_max_q_values"
+                    ],
+                    [
+                      "last_training_min_q_values",
+                      "last_training_target_min_q_values"
+                    ],
+                    [
+                      "timers"
+                    ],
+                    [
+                      "ms"
+                    ],
+                    [
+                      "throughput"
+                    ],
+                    [
+                      "_lr"
+                    ],
+                    [
+                      "temperature"
+                    ],
+                    [
+                      "ret"
+                    ]
+                  ],
+                  "plot_axis_scale_multipliers": [
+                    0.005,
+                    0.005
+                  ],
+                  "plot_keys": [
+                    "grad_gnorm",
+                    "reward",
+                    "loss",
+                    "entropy",
+                    "entropy_avg",
+                    "td_error",
+                    "error",
+                    "act_dist_inputs_avg",
+                    "act_dist_inputs_single",
+                    "q_values_avg",
+                    "action_prob",
+                    "q_values_single",
+                    "_lr",
+                    "max_q_values",
+                    "min_q_values",
+                    "learn_on_batch",
+                    "timers",
+                    "ms",
+                    "throughput",
+                    "temperature",
+                    "ret"
+                  ],
+                  "pseudo": false,
+                  "re_init_every_n_epi": 1,
+                  "reg": 0.0,
+                  "save_dir": "dice_results_ipd",
+                  "seed": 1620988827,
+                  "simple_net": true,
+                  "trace_length": 200,
+                  "train_n_replicates": 1,
+                  "wandb": {
+                    "api_key_file": "~/anonymized/submission/experiments/tune_class_api/../../../api_key_wandb",
+                    "group": "LOLA_Exact/2021_05_14/10_40_27",
+                    "project": "LOLA_Exact"
+                  },
+                  "with_linear_LR_decay_to_zero": false,
+                  "x_limits": [
+                    -0.1,
+                    4.1
+                  ],
+                  "y_limits": [
+                    -0.1,
+                    4.1
+                  ]
+                }
+              }
+            }
+          ],
+          "opp_default_welfare_fn": "utilitarian",
+          "opp_player_idx": 0,
+          "own_default_welfare_fn": "egalitarian",
+          "own_player_idx": 1,
+          "policy_checkpoints": {
+            "egalitarian": [
+              "~/ray_results/LOLA_Exact/2021_05_07/10_02_39/LOLAExactTrainer_5d390_00011_11_seed=1620381770_2021-05-07_10-03-31/checkpoint_000051/checkpoint.json",
+              "~/ray_results/LOLA_Exact/2021_05_07/10_02_39/LOLAExactTrainer_5d390_00021_21_seed=1620381780_2021-05-07_10-04-24/checkpoint_000051/checkpoint.json",
+              "~/ray_results/LOLA_Exact/2021_05_07/10_02_39/LOLAExactTrainer_5d390_00007_7_seed=1620381766_2021-05-07_10-02-43/checkpoint_000051/checkpoint.json",
+              "~/ray_results/LOLA_Exact/2021_05_07/10_02_39/LOLAExactTrainer_5d390_00008_8_seed=1620381767_2021-05-07_10-02-43/checkpoint_000051/checkpoint.json",
+              "~/ray_results/LOLA_Exact/2021_05_07/10_02_39/LOLAExactTrainer_5d390_00016_16_seed=1620381775_2021-05-07_10-03-33/checkpoint_000051/checkpoint.json",
+              "~/ray_results/LOLA_Exact/2021_05_07/10_02_39/LOLAExactTrainer_5d390_00023_23_seed=1620381782_2021-05-07_10-04-24/checkpoint_000051/checkpoint.json"
+            ],
+            "mixed": [
+              "~/ray_results/LOLA_Exact/2021_05_07/10_02_39/LOLAExactTrainer_5d390_00002_2_seed=1620381761_2021-05-07_10-02-43/checkpoint_000051/checkpoint.json",
+              "~/ray_results/LOLA_Exact/2021_05_07/10_02_39/LOLAExactTrainer_5d390_00012_12_seed=1620381771_2021-05-07_10-03-32/checkpoint_000051/checkpoint.json",
+              "~/ray_results/LOLA_Exact/2021_05_07/10_02_39/LOLAExactTrainer_5d390_00027_27_seed=1620381786_2021-05-07_10-04-25/checkpoint_000051/checkpoint.json",
+              "~/ray_results/LOLA_Exact/2021_05_07/10_02_39/LOLAExactTrainer_5d390_00026_26_seed=1620381785_2021-05-07_10-04-25/checkpoint_000051/checkpoint.json",
+              "~/ray_results/LOLA_Exact/2021_05_07/10_02_39/LOLAExactTrainer_5d390_00006_6_seed=1620381765_2021-05-07_10-02-43/checkpoint_000051/checkpoint.json",
+              "~/ray_results/LOLA_Exact/2021_05_07/10_02_39/LOLAExactTrainer_5d390_00015_15_seed=1620381774_2021-05-07_10-03-32/checkpoint_000051/checkpoint.json",
+              "~/ray_results/LOLA_Exact/2021_05_07/10_02_39/LOLAExactTrainer_5d390_00009_9_seed=1620381768_2021-05-07_10-02-43/checkpoint_000051/checkpoint.json",
+              "~/ray_results/LOLA_Exact/2021_05_07/10_02_39/LOLAExactTrainer_5d390_00005_5_seed=1620381764_2021-05-07_10-02-43/checkpoint_000051/checkpoint.json",
+              "~/ray_results/LOLA_Exact/2021_05_07/10_02_39/LOLAExactTrainer_5d390_00025_25_seed=1620381784_2021-05-07_10-04-24/checkpoint_000051/checkpoint.json",
+              "~/ray_results/LOLA_Exact/2021_05_07/10_02_39/LOLAExactTrainer_5d390_00019_19_seed=1620381778_2021-05-07_10-03-34/checkpoint_000051/checkpoint.json",
+              "~/ray_results/LOLA_Exact/2021_05_07/10_02_39/LOLAExactTrainer_5d390_00024_24_seed=1620381783_2021-05-07_10-04-24/checkpoint_000051/checkpoint.json",
+              "~/ray_results/LOLA_Exact/2021_05_07/10_02_39/LOLAExactTrainer_5d390_00014_14_seed=1620381773_2021-05-07_10-03-32/checkpoint_000051/checkpoint.json",
+              "~/ray_results/LOLA_Exact/2021_05_07/10_02_39/LOLAExactTrainer_5d390_00003_3_seed=1620381762_2021-05-07_10-02-43/checkpoint_000051/checkpoint.json",
+              "~/ray_results/LOLA_Exact/2021_05_07/10_02_39/LOLAExactTrainer_5d390_00017_17_seed=1620381776_2021-05-07_10-03-33/checkpoint_000051/checkpoint.json",
+              "~/ray_results/LOLA_Exact/2021_05_07/10_02_39/LOLAExactTrainer_5d390_00013_13_seed=1620381772_2021-05-07_10-03-32/checkpoint_000051/checkpoint.json"
+            ],
+            "utilitarian": [
+              "~/ray_results/LOLA_Exact/2021_05_07/10_02_39/LOLAExactTrainer_5d390_00001_1_seed=1620381760_2021-05-07_10-02-43/checkpoint_000051/checkpoint.json",
+              "~/ray_results/LOLA_Exact/2021_05_07/10_02_39/LOLAExactTrainer_5d390_00010_10_seed=1620381769_2021-05-07_10-02-43/checkpoint_000051/checkpoint.json",
+              "~/ray_results/LOLA_Exact/2021_05_07/10_02_39/LOLAExactTrainer_5d390_00022_22_seed=1620381781_2021-05-07_10-04-24/checkpoint_000051/checkpoint.json",
+              "~/ray_results/LOLA_Exact/2021_05_07/10_02_39/LOLAExactTrainer_5d390_00028_28_seed=1620381787_2021-05-07_10-04-27/checkpoint_000051/checkpoint.json",
+              "~/ray_results/LOLA_Exact/2021_05_07/10_02_39/LOLAExactTrainer_5d390_00000_0_seed=1620381759_2021-05-07_10-02-43/checkpoint_000051/checkpoint.json",
+              "~/ray_results/LOLA_Exact/2021_05_07/10_02_39/LOLAExactTrainer_5d390_00029_29_seed=1620381788_2021-05-07_10-04-27/checkpoint_000051/checkpoint.json",
+              "~/ray_results/LOLA_Exact/2021_05_07/10_02_39/LOLAExactTrainer_5d390_00020_20_seed=1620381779_2021-05-07_10-03-34/checkpoint_000051/checkpoint.json",
+              "~/ray_results/LOLA_Exact/2021_05_07/10_02_39/LOLAExactTrainer_5d390_00004_4_seed=1620381763_2021-05-07_10-02-43/checkpoint_000051/checkpoint.json",
+              "~/ray_results/LOLA_Exact/2021_05_07/10_02_39/LOLAExactTrainer_5d390_00018_18_seed=1620381777_2021-05-07_10-03-34/checkpoint_000051/checkpoint.json"
+            ]
+          },
+          "policy_id_to_load": "player_col",
+          "solve_meta_game_after_init": false,
+          "switch_of_algo_every_n_epi": 1,
+          "tau": null,
+          "use_algo_in_order": false,
+          "use_random_algo": true
+        }
+      ],
+      "player_row": [
+        "<class 'submission.algos.welfare_coordination.WelfareCoordinationTorchPolicy'>",
+        "Discrete(5)",
+        "Discrete(2)",
+        {
+          "all_welfare_pairs_wt_payoffs": {
+            "egalitarian-egalitarian": [
+              1.8032519650519478,
+              1.7827200297849801
+            ],
+            "egalitarian-mixed": [
+              0.8208444162274369,
+              0.5837581588307469
+            ],
+            "egalitarian-utilitarian": [
+              1.13120098985416,
+              0.6177326521441953
+            ],
+            "mixed-egalitarian": [
+              1.0718486932499243,
+              0.6503733423801199
+            ],
+            "mixed-mixed": [
+              2.7968147458896286,
+              1.3993283853443363
+            ],
+            "mixed-utilitarian": [
+              1.1290622085323154,
+              0.5355138370442141
+            ],
+            "utilitarian-egalitarian": [
+              1.0060292244067066,
+              0.4122758614371312
+            ],
+            "utilitarian-mixed": [
+              1.2031189478124809,
+              0.4970165074750593
+            ],
+            "utilitarian-utilitarian": [
+              3.2166842424351687,
+              0.8145714343830807
+            ]
+          },
+          "distrib_over_welfare_sets_to_annonce": "tensor([0., 0., 0., 0., 0., 0., 1.])",
+          "freeze_algo": true,
+          "nested_policies": [
+            {
+              "Policy_class": "<class 'submission.utils.policy.get_tune_policy_class.<locals>.FrozenPolicyFromTuneTrainer'>",
+              "config_update": {
+                "tune_config": {
+                  "Q_net_std": 3.0,
+                  "TuneTrainerClass": "<class 'submission.algos.lola.train_exact_tune_class_API.LOLAExactTrainer'>",
+                  "batch_size": 1,
+                  "classify_into_welfare_fn": true,
+                  "clip_update": null,
+                  "corrections": true,
+                  "debug": false,
+                  "env_name": "IteratedAsymBoS",
+                  "exp_name": "LOLA_Exact/2021_05_14/10_40_27",
+                  "gamma": 0.96,
+                  "load_plot_data": null,
+                  "lr": 1.0,
+                  "lr_correction": 1.0,
+                  "metric": "ret1",
+                  "min_iter_time_s": 3.0,
+                  "num_episodes": 100,
+                  "num_hidden": 32,
+                  "plot_assemblage_tags": [
+                    [
+                      "policy_reward_mean"
+                    ],
+                    [
+                      "grad_gnorm"
+                    ],
+                    [
+                      "entropy_buffer_samples_avg"
+                    ],
+                    [
+                      "entropy_avg"
+                    ],
+                    [
+                      "loss",
+                      "td_error"
+                    ],
+                    [
+                      "learn_on_batch"
+                    ],
+                    [
+                      "last_training_max_q_values"
+                    ],
+                    [
+                      "last_training_min_q_values"
+                    ],
+                    [
+                      "act_dist_inputs_avg_act0"
+                    ],
+                    [
+                      "act_dist_inputs_avg_act1"
+                    ],
+                    [
+                      "act_dist_inputs_avg_act2"
+                    ],
+                    [
+                      "act_dist_inputs_avg_act3"
+                    ],
+                    [
+                      "q_values_avg_act0"
+                    ],
+                    [
+                      "q_values_avg_act1"
+                    ],
+                    [
+                      "q_values_avg_act2"
+                    ],
+                    [
+                      "q_values_avg_act3"
+                    ],
+                    [
+                      "q_values_single_max"
+                    ],
+                    [
+                      "act_dist_inputs_single_max"
+                    ],
+                    [
+                      "action_prob_single"
+                    ],
+                    [
+                      "action_prob_avg"
+                    ],
+                    [
+                      "reward"
+                    ],
+                    [
+                      "last_training_max_q_values",
+                      "last_training_target_max_q_values"
+                    ],
+                    [
+                      "last_training_min_q_values",
+                      "last_training_target_min_q_values"
+                    ],
+                    [
+                      "timers"
+                    ],
+                    [
+                      "ms"
+                    ],
+                    [
+                      "throughput"
+                    ],
+                    [
+                      "_lr"
+                    ],
+                    [
+                      "temperature"
+                    ],
+                    [
+                      "ret"
+                    ]
+                  ],
+                  "plot_axis_scale_multipliers": [
+                    0.005,
+                    0.005
+                  ],
+                  "plot_keys": [
+                    "grad_gnorm",
+                    "reward",
+                    "loss",
+                    "entropy",
+                    "entropy_avg",
+                    "td_error",
+                    "error",
+                    "act_dist_inputs_avg",
+                    "act_dist_inputs_single",
+                    "q_values_avg",
+                    "action_prob",
+                    "q_values_single",
+                    "_lr",
+                    "max_q_values",
+                    "min_q_values",
+                    "learn_on_batch",
+                    "timers",
+                    "ms",
+                    "throughput",
+                    "temperature",
+                    "ret"
+                  ],
+                  "pseudo": false,
+                  "re_init_every_n_epi": 1,
+                  "reg": 0.0,
+                  "save_dir": "dice_results_ipd",
+                  "seed": 1620988827,
+                  "simple_net": true,
+                  "trace_length": 200,
+                  "train_n_replicates": 1,
+                  "wandb": {
+                    "api_key_file": "~/anonymized/submission/experiments/tune_class_api/../../../api_key_wandb",
+                    "group": "LOLA_Exact/2021_05_14/10_40_27",
+                    "project": "LOLA_Exact"
+                  },
+                  "with_linear_LR_decay_to_zero": false,
+                  "x_limits": [
+                    -0.1,
+                    4.1
+                  ],
+                  "y_limits": [
+                    -0.1,
+                    4.1
+                  ]
+                }
+              }
+            }
+          ],
+          "opp_default_welfare_fn": "egalitarian",
+          "opp_player_idx": 1,
+          "own_default_welfare_fn": "utilitarian",
+          "own_player_idx": 0,
+          "policy_checkpoints": {
+            "egalitarian": [
+              "~/ray_results/LOLA_Exact/2021_05_07/08_55_34/LOLAExactTrainer_fdbd7_00008_8_seed=1620377742_2021-05-07_08-55-37/checkpoint_000051/checkpoint.json",
+              "~/ray_results/LOLA_Exact/2021_05_07/08_55_34/LOLAExactTrainer_fdbd7_00015_15_seed=1620377749_2021-05-07_08-56-12/checkpoint_000051/checkpoint.json",
+              "~/ray_results/LOLA_Exact/2021_05_07/08_55_34/LOLAExactTrainer_fdbd7_00007_7_seed=1620377741_2021-05-07_08-55-37/checkpoint_000051/checkpoint.json",
+              "~/ray_results/LOLA_Exact/2021_05_07/08_55_34/LOLAExactTrainer_fdbd7_00026_26_seed=1620377760_2021-05-07_08-56-52/checkpoint_000051/checkpoint.json",
+              "~/ray_results/LOLA_Exact/2021_05_07/08_55_34/LOLAExactTrainer_fdbd7_00024_24_seed=1620377758_2021-05-07_08-56-52/checkpoint_000051/checkpoint.json"
+            ],
+            "mixed": [
+              "~/ray_results/LOLA_Exact/2021_05_07/08_55_34/LOLAExactTrainer_fdbd7_00014_14_seed=1620377748_2021-05-07_08-56-12/checkpoint_000051/checkpoint.json",
+              "~/ray_results/LOLA_Exact/2021_05_07/08_55_34/LOLAExactTrainer_fdbd7_00002_2_seed=1620377736_2021-05-07_08-55-37/checkpoint_000051/checkpoint.json",
+              "~/ray_results/LOLA_Exact/2021_05_07/08_55_34/LOLAExactTrainer_fdbd7_00018_18_seed=1620377752_2021-05-07_08-56-13/checkpoint_000051/checkpoint.json",
+              "~/ray_results/LOLA_Exact/2021_05_07/08_55_34/LOLAExactTrainer_fdbd7_00020_20_seed=1620377754_2021-05-07_08-56-14/checkpoint_000051/checkpoint.json",
+              "~/ray_results/LOLA_Exact/2021_05_07/08_55_34/LOLAExactTrainer_fdbd7_00029_29_seed=1620377763_2021-05-07_08-56-54/checkpoint_000051/checkpoint.json",
+              "~/ray_results/LOLA_Exact/2021_05_07/08_55_34/LOLAExactTrainer_fdbd7_00016_16_seed=1620377750_2021-05-07_08-56-12/checkpoint_000051/checkpoint.json",
+              "~/ray_results/LOLA_Exact/2021_05_07/08_55_34/LOLAExactTrainer_fdbd7_00005_5_seed=1620377739_2021-05-07_08-55-37/checkpoint_000051/checkpoint.json",
+              "~/ray_results/LOLA_Exact/2021_05_07/08_55_34/LOLAExactTrainer_fdbd7_00009_9_seed=1620377743_2021-05-07_08-55-37/checkpoint_000051/checkpoint.json",
+              "~/ray_results/LOLA_Exact/2021_05_07/08_55_34/LOLAExactTrainer_fdbd7_00025_25_seed=1620377759_2021-05-07_08-56-52/checkpoint_000051/checkpoint.json"
+            ],
+            "utilitarian": [
+              "~/ray_results/LOLA_Exact/2021_05_07/08_55_34/LOLAExactTrainer_fdbd7_00006_6_seed=1620377740_2021-05-07_08-55-37/checkpoint_000051/checkpoint.json",
+              "~/ray_results/LOLA_Exact/2021_05_07/08_55_34/LOLAExactTrainer_fdbd7_00013_13_seed=1620377747_2021-05-07_08-56-12/checkpoint_000051/checkpoint.json",
+              "~/ray_results/LOLA_Exact/2021_05_07/08_55_34/LOLAExactTrainer_fdbd7_00001_1_seed=1620377735_2021-05-07_08-55-37/checkpoint_000051/checkpoint.json",
+              "~/ray_results/LOLA_Exact/2021_05_07/08_55_34/LOLAExactTrainer_fdbd7_00021_21_seed=1620377755_2021-05-07_08-56-52/checkpoint_000051/checkpoint.json",
+              "~/ray_results/LOLA_Exact/2021_05_07/08_55_34/LOLAExactTrainer_fdbd7_00011_11_seed=1620377745_2021-05-07_08-56-12/checkpoint_000051/checkpoint.json",
+              "~/ray_results/LOLA_Exact/2021_05_07/08_55_34/LOLAExactTrainer_fdbd7_00023_23_seed=1620377757_2021-05-07_08-56-52/checkpoint_000051/checkpoint.json",
+              "~/ray_results/LOLA_Exact/2021_05_07/08_55_34/LOLAExactTrainer_fdbd7_00003_3_seed=1620377737_2021-05-07_08-55-37/checkpoint_000051/checkpoint.json",
+              "~/ray_results/LOLA_Exact/2021_05_07/08_55_34/LOLAExactTrainer_fdbd7_00010_10_seed=1620377744_2021-05-07_08-55-37/checkpoint_000051/checkpoint.json",
+              "~/ray_results/LOLA_Exact/2021_05_07/08_55_34/LOLAExactTrainer_fdbd7_00022_22_seed=1620377756_2021-05-07_08-56-52/checkpoint_000051/checkpoint.json",
+              "~/ray_results/LOLA_Exact/2021_05_07/08_55_34/LOLAExactTrainer_fdbd7_00027_27_seed=1620377761_2021-05-07_08-56-52/checkpoint_000051/checkpoint.json",
+              "~/ray_results/LOLA_Exact/2021_05_07/08_55_34/LOLAExactTrainer_fdbd7_00012_12_seed=1620377746_2021-05-07_08-56-12/checkpoint_000051/checkpoint.json",
+              "~/ray_results/LOLA_Exact/2021_05_07/08_55_34/LOLAExactTrainer_fdbd7_00017_17_seed=1620377751_2021-05-07_08-56-13/checkpoint_000051/checkpoint.json",
+              "~/ray_results/LOLA_Exact/2021_05_07/08_55_34/LOLAExactTrainer_fdbd7_00004_4_seed=1620377738_2021-05-07_08-55-37/checkpoint_000051/checkpoint.json",
+              "~/ray_results/LOLA_Exact/2021_05_07/08_55_34/LOLAExactTrainer_fdbd7_00019_19_seed=1620377753_2021-05-07_08-56-14/checkpoint_000051/checkpoint.json",
+              "~/ray_results/LOLA_Exact/2021_05_07/08_55_34/LOLAExactTrainer_fdbd7_00000_0_seed=1620377734_2021-05-07_08-55-37/checkpoint_000051/checkpoint.json",
+              "~/ray_results/LOLA_Exact/2021_05_07/08_55_34/LOLAExactTrainer_fdbd7_00028_28_seed=1620377762_2021-05-07_08-56-54/checkpoint_000051/checkpoint.json"
+            ]
+          },
+          "policy_id_to_load": "player_row",
+          "solve_meta_game_after_init": false,
+          "switch_of_algo_every_n_epi": 1,
+          "tau": null,
+          "use_algo_in_order": false,
+          "use_random_algo": true
+        }
+      ]
+    },
+    "policies_to_train": [
+      "None"
+    ],
+    "policy_mapping_fn": "<function generate_eval_config.<locals>.<lambda> at 0x7fa5884a58c8>"
+  },
+  "num_envs_per_worker": 1,
+  "num_workers": 0,
+  "seed": 1620988831
+}

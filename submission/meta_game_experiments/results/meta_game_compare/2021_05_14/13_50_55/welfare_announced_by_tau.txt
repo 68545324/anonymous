@@ -1,0 +1,6 @@
+===== Welfare sets announced with tau = 0.0 =====
+Player 1: Counter({'utilitarian + mixed': 170, 'utilitarian + egalitarian + mixed': 30})
+Player 2: Counter({'egalitarian + mixed': 193, 'egalitarian': 7})
+===== Welfare sets announced with tau = 1.0 =====
+Player 1: Counter({'utilitarian': 200})
+Player 2: Counter({'egalitarian': 188, 'egalitarian + mixed': 12})
